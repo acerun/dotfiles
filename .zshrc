@@ -110,3 +110,9 @@ alias pyenv="source ~/pyEnv/bin/activate"
 #screenfetch
 stty ixany
 stty ixoff -ixon
+
+# Auto start tmux
+tmux attach &> /dev/null
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
+fi
