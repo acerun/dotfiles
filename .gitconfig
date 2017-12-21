@@ -32,3 +32,6 @@
 [alias]
 	a = add --all
 	l = log --oneline --graph --decorate
+	d = difftool
+[difftool]
+	prompt = false
