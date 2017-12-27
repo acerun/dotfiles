@@ -103,6 +103,7 @@ export ARCHFLAGS="-arch x86_64"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias rgf="rg --files -u| rg"
 alias pyenv="source ~/pyEnv/bin/activate"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
