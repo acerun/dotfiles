@@ -117,3 +117,9 @@ tmux attach &> /dev/null
 if [[ ! $TERM =~ screen ]]; then
     exec tmux
 fi
+
+# Use pygments for GNU GLOBAL
+if [[ -f /usr/local/share/gtags/gtags.conf ]]; then
+    export GTAGSCONF=/usr/local/share/gtags/gtags.conf
+    export GTAGSLABEL=native-pygments
+fi
