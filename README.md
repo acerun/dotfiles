@@ -7,6 +7,7 @@
 `sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
 
 ### VIM
+* Reference https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source
 * VIM8
 ```
 git clone https://github.com/vim/vim.git
@@ -15,13 +16,21 @@ make
 ```
 * .vimrc
 ```
-git clone git@github.com:futureinsky/.vim.git ~/.vim
+git clone https://github.com/futureinsky/.vim.git ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
 ```
 
 ### Tmux
 ```
-git clone https://github.com/tmux/tmux.git
+sudo apt install -y automake
+sudo apt install -y build-essential
+sudo apt install -y pkg-config
+sudo apt install -y libevent-dev
+sudo apt install -y libncurses5-dev
+
+git clone https://github.com/tmux/tmux.git /tmp/tmux
+cd /tmp/tmux
+sh autogen.sh
 ./configure && make
 sudo make install
 ```
