@@ -71,7 +71,10 @@ setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo git extract z d)
+
+# For zsh-autosuggestions:
+# git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+plugins=(sudo git extract z d zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
