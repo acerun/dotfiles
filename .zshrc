@@ -116,9 +116,8 @@ stty ixany
 stty ixoff -ixon
 
 # Auto start tmux
-tmux attach &> /dev/null
 if [[ ! $TERM =~ screen ]]; then
-    exec tmux
+    tmux attach > /dev/null || exec tmux
 fi
 
 # Use pygments for GNU GLOBAL
